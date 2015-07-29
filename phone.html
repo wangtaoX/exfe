@@ -1,0 +1,161 @@
+
+<style>
+    body {
+        background: #eee;
+    }
+    .phone {
+        width: 13em;
+        height: 24em;
+        border-radius: 6px;
+        border: 2px solid rgba(0, 0, 0, 0.5);
+    }
+    .inner {
+        display: block;
+        position: relative;
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        height: 18em;
+        border-left: none;
+        border-right: none;
+        top: 2.5em;
+    }
+
+    .inner:before {
+        content:'';
+        position: absolute;
+        width: 3em;
+        height: 0.25em;
+        left:50%;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 0.5em;
+        top: -1.5em;
+        margin-left: -1.5em;
+    }
+    .inner:after {
+        content: '';
+        position: absolute;
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 100%;
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        top: 100%;
+        left: 50%;
+        margin-top: 0.4em;
+        margin-left: -1.25em;
+    }
+
+    .circle {
+        box-sizing: border-box;
+        width: 200px;
+        height: 200px;
+        border: 28px solid #7cf1ff;
+        border-top-color: #ff7cf1;
+        border-right-color: #ff7cf1;
+        border-radius: 100%;
+
+        -webkit-transition: border-width .2s ease-out,
+                        -webkit-transform 1s ease-out;
+        position: relative;
+    }
+
+
+    .circle span {
+        box-sizing: content-box;
+        display: block;
+        font-weight: bold;
+        width: 200px;
+        line-height: 200px;
+        color: #25484c;
+        font-size: 32px;
+        text-align: center;
+        -webkit-transition: color .2s ease-in,
+                    -webkit-transform 1s ease-out,
+                    font-size .2s ease-in,
+                    top .2s ease-out,
+                    left .2s ease-out;
+        position: absolute;
+        top: -28px;
+        left: -28px;
+    }
+
+    .circle:hover {
+        border-width: 16px;
+        -webkit-transform: rotate(360deg);
+    }
+
+    .circle:hover span {
+        color: #cc63c0;
+        font-size: 48px;
+        top: -16px;
+        left: -16px;
+        -webkit-transform: rotate(-360deg);
+    }
+
+    .inner .circle {
+       margin: 0 auto; 
+       margin-top: 40px;
+       -webkit-animation-name: fadein;
+       -webkit-animation-duration: 3s;
+       -webkit-animation-timing-function: ease-in;
+       -webkit-animation-fill-mode: forwards;
+       -webkit-animation-iteration-count: 2;
+       -webkit-animation-direction: alternate-reverse;
+       opacity: 0;
+    }
+
+    @-webkit-keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .circle1 {
+        width: 200px;
+        height: 200px;
+        border: 24px solid black;
+        box-sizing: border-box;
+        position: relative;
+        border-radius: 100%;
+    }
+    .circle2 {
+        width: 10em;
+        height: 10em;
+        border: 1em solid red;
+        border-radius: 100%;
+        box-sizing: border-box;
+    }
+
+    .circle1 span {
+        display: block;
+        text-align:center;
+        line-height: 200px;
+        width: 200px;
+        position: absolute;
+
+        font-size: 24px;
+
+        top: -24px;
+        left: -24px;
+    }
+
+    .circle1:hover {
+        border-width: 16px;
+    }
+    .circle1:hover span {
+        font-size: 32px;
+        top: -16px;
+        left: -16px;
+    }
+</style>
+
+<body>
+    <div class="phone">
+        <div class="inner">
+        </div>
+    </div>
+    <div class="circle">
+        <span>100 $</span>
+    </div>
+</body>
