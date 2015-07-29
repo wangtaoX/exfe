@@ -1,6 +1,6 @@
 <head>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="css/font.css">
     <style>
         .container {
             width: 680px;
@@ -72,6 +72,112 @@
                 opacity: 0;
             }
         }
+
+        .circle {
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            border: 28px solid #7cf1ff;
+            border-top-color: #ff7cf1;
+            border-right-color: #ff7cf1;
+            border-radius: 100%;
+
+            -webkit-transition: border-width .2s ease-out,
+                            -webkit-transform 1s ease-out;
+            position: relative;
+        }
+
+
+        .circle span {
+            box-sizing: content-box;
+            display: block;
+            font-weight: bold;
+            width: 200px;
+            line-height: 200px;
+            color: #25484c;
+            font-size: 32px;
+            text-align: center;
+            -webkit-transition: color .2s ease-in,
+                        -webkit-transform 1s ease-out,
+                        font-size .2s ease-in,
+                        top .2s ease-out,
+                        left .2s ease-out;
+            position: absolute;
+            top: -28px;
+            left: -28px;
+        }
+
+        .circle:hover {
+            border-width: 16px;
+            -webkit-transform: rotate(360deg);
+        }
+
+        .circle:hover span {
+            color: #cc63c0;
+            font-size: 48px;
+            top: -16px;
+            left: -16px;
+            -webkit-transform: rotate(-360deg);
+        }
+
+        .inner .circle {
+           margin: 0 auto; 
+           margin-top: 40px;
+           -webkit-animation-name: fadein;
+           -webkit-animation-duration: 3s;
+           -webkit-animation-timing-function: ease-in;
+           -webkit-animation-fill-mode: forwards;
+           -webkit-animation-iteration-count: 2;
+           -webkit-animation-direction: alternate-reverse;
+           opacity: 0;
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .circle1 {
+            width: 200px;
+            height: 200px;
+            border: 24px solid black;
+            box-sizing: border-box;
+            position: relative;
+            border-radius: 100%;
+        }
+        .circle2 {
+            width: 10em;
+            height: 10em;
+            border: 1em solid red;
+            border-radius: 100%;
+            box-sizing: border-box;
+        }
+
+        .circle1 span {
+            display: block;
+            text-align:center;
+            line-height: 200px;
+            width: 200px;
+            position: absolute;
+
+            font-size: 24px;
+
+            top: -24px;
+            left: -24px;
+        }
+
+        .circle1:hover {
+            border-width: 16px;
+        }
+        .circle1:hover span {
+            font-size: 32px;
+            top: -16px;
+            left: -16px;
+        }
     </style>
 </head>
 
@@ -81,7 +187,9 @@
         <div class="down"></div>
     </div>
 
-    <ul>
-        <li><a href="phone.html">phone</li>
-    </ul>
+    <div class="container" style="margin-top: 30px">
+        <div class="circle">
+            <span>100 $</span>
+        </div>
+    </div>
 </body>
