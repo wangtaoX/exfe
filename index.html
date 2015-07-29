@@ -1,0 +1,83 @@
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font.css">
+    <style>
+        .container {
+            width: 680px;
+            height: 320px;
+            background: #f1f5f6;
+            margin: 0 auto;
+            position: relative;
+        }
+        .up {
+            width: 64px;
+            height: 64px;
+            background: #fff;
+            border: 10px solid #ff9900;
+            box-sizing: border-box;
+
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            margin-top: -69px;
+            margin-left: -81px;
+            -webkit-transform-origin: 50% 100%;
+            -webkit-animation: run 4s infinite ease-out;
+        }
+        .down {
+            width: 192px;
+            height: 10px;
+            background: #5574a6;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -5px;
+            margin-left: -81px;
+        }
+
+        @-webkit-keyframes run {
+            0% 15% {
+                -webkit-transform: translateX(0px);
+            }
+
+            15%, 25% {
+                -webkit-transform: translateX(40px);
+            }
+
+            25%, 38% {
+                -webkit-transform: translateX(80px);
+            }
+
+            40%, 45% {
+                -webkit-transform: translateX(160px);
+            }
+
+            50%, 52% {
+                transform: translateX(160px) rotateZ(20deg);
+            }
+
+            70%, 75% {
+                transform: translateX(160px) rotateZ(10deg);
+            }
+
+            78% {
+                transform: translateX(160px) rotateZ(24deg);
+                opacity: 1;
+            }
+
+            86% ,100% {
+                transform: translateX(160px) translateY(64px) rotateZ(90deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="up"></div>
+        <div class="down"></div>
+    </div>
+</body>

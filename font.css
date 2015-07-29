@@ -1,0 +1,11 @@
+.iconf {
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+
+.iconf:before {
+    content: "\f00c";
+    height: 100px;
+    width: 100px;
+}
