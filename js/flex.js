@@ -38,4 +38,5 @@ window.onload = function() {
     new flex().init("flex-direction-panel", "flex-direction");
     new flex().init("flex-wrap-panel", "flex-wrap");
     new flex().init("justify-content-panel", "justify-content");
+    new flex().init("align-items-panel", "align-items");
 };
