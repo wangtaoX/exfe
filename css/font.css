@@ -9,7 +9,7 @@
     display: flex;
     width: 100%;
     padding: 0px;
-    flex-warp: wrap;
+    flex-wrap: wrap;
 }
 
 #main-aside ul li {
