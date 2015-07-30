@@ -32,6 +32,18 @@ input[type="button"] {
     flex: 0 0 auto;
 }
 
+.x2 {
+    height: 200px;
+}
+
+.x3 {
+    height: 300px;
+}
+
+.x15 {
+    height: 150px;
+}
+
 .c1 {
     background-color: #41e1d1;
 }
